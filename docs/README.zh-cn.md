@@ -1,8 +1,8 @@
 # [simter-parent](https://github.com/simter/simter-parent)
 
-Simter base maven dependencies manage. [[中文]]
+Simter 基础的 maven 依赖配置管理。[[English]]
 
-## Usage
+## 使用
 
 ```xml
 <dependency>
@@ -11,37 +11,37 @@ Simter base maven dependencies manage. [[中文]]
   <version>0.1.0</version>
 </dependency>
 ```
-## Requirement
+## 要求
 
 - Java 8+
 - UTF-8 for java source and compilation
 
-## Build
+## 构建
 
 ```bash
 mvn clean package
 ```
 
-## Deploy
+## 发布
 
-### Deploy to LAN Nexus Repository
+### 发布到局域网 Nexus 仓库
 
 ```bash
 mvn clean deploy -Plan
 ```
 
-### Deploy to Maven Central Repository
+### 发布到 Maven 中心仓库
 
 ```bash
 mvn clean deploy -Poss
 ```
 
-## LAN Development Configuration 
+## 局域网开发环境配置
 
-You can ignore this configuration if you always use the internet to download all maven dependencies.
-Here is for LAN Development Configuration. It use [Sonatype Nexus3+] to cache and share all maven dependency downloads.
+如果网速佳只需通过互联网下载 Maven 依赖包，可以忽略这里的配置说明。
+这里指导配置局域网环境使用 [Sonatype Nexus3+] 缓存所有的 Maven 依赖包的下载。
 
-### Config `settings.xml` for developer
+### `settings.xml` 的一般配置
 
 ```xml
 <settings>
@@ -59,26 +59,25 @@ Here is for LAN Development Configuration. It use [Sonatype Nexus3+] to cache an
 </settings>
 ```
 
-### Config `settings.xml` for publisher
+### `settings.xml` 针对发布者的特殊配置
 
-You need to config more things in `settings.xml` if you are a package publisher. 
-Means you will run `mvn deploy` command.``````
+如果您是包的打包发布者（意味着要执行 `mvn deploy` 命令），需要额外添加如下配置：
 
 ```xml
 <settings>
   ...
   <servers>
-    <!-- The account and password for deploy to LAN nexus -->
+    <!-- 发布到局域网 nexus 的账号密码配置 -->
     <server>
-      <!-- id must be 'lan'-->
+      <!-- id 必需设为 'lan'-->
       <id>lan</id>
       <username>your-lan-nexus-account</username>
       <password>your-lan-nexus-password</password>
     </server>
 
-    <!-- The account and password for deploy to oss (https://oss.sonatype.org) -->
+    <!-- 发布到 oss (https://oss.sonatype.org) 的账号密码配置 -->
     <server>
-      <!-- id must be 'oss'-->
+      <!-- id 必需设为 'oss'-->
       <id>oss</id>
       <username>your-oss-account</username>
       <password>your-oss-password</password>
@@ -92,12 +91,12 @@ Means you will run `mvn deploy` command.``````
         <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
-        <!-- The LAN nexus release url for deploy
+        <!-- 局域网的 nexus release 路径
           e.g. http://192.168.0.1:8080/nexus/repository/maven-release
         -->
         <lan-release-url>http://[ip]:[port][/nexus-context-path]/repository/[release-repository-name]</lan-release-url>
 
-        <!-- The LAN nexus snapshot url for deploy
+        <!-- 局域网的 nexus snapshot 路径
           e.g. http://192.168.0.1:8080/nexus/repository/maven-snapshot
         -->
         <lan-snapshot-url>http://[ip]:[port][/nexus-context-path]/repository/[snapshot-repository-name]</lan-snapshot-url>
@@ -108,4 +107,4 @@ Means you will run `mvn deploy` command.``````
 ```
 
 [Sonatype Nexus3+]: http://www.sonatype.org/nexus
-[中文]: https://github.com/simter/simter-parent/blob/master/docs/README.zh-cn.md
+[English]: https://github.com/simter/simter-parent/blob/master/README.md
