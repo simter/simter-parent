@@ -62,7 +62,7 @@ Here is for LAN Development Configuration. It use [Sonatype Nexus3+] to cache an
 ### Config `settings.xml` for publisher
 
 You need to config more things in `settings.xml` if you are a package publisher. 
-Means you will run `mvn deploy` command.``````
+Means you will run `mvn deploy` command.
 
 ```xml
 <settings>
