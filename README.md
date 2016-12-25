@@ -8,7 +8,7 @@ Simter base maven dependencies manage. [[中文]]
 <dependency>
   <groupId>tech.simter</groupId>
   <artifactId>simter-parent</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
 </dependency>
 ```
 ## Requirement
@@ -30,10 +30,16 @@ mvn clean package
 mvn clean deploy -Plan
 ```
 
-### Deploy to Maven Central Repository
+### Deploy to OSS Repository
 
 ```bash
 mvn clean deploy -Poss
+```
+
+### Deploy to Bintray Repository
+
+```bash
+mvn clean deploy -Pbintray
 ```
 
 ## LAN Development Configuration 
@@ -82,6 +88,14 @@ Means you will run `mvn deploy` command.
       <id>oss</id>
       <username>your-oss-account</username>
       <password>your-oss-password</password>
+    </server>
+
+    <!-- The account and api-key for deploy to bintray (https://simter.bintray.com/maven-repo) -->
+    <server>
+      <!-- id must be 'bintray'-->
+      <id>bintray</id>
+      <username>your-bintray-account</username>
+      <password>your-bintray-api-key</password>
     </server>
   </servers>
 

@@ -8,7 +8,7 @@ Simter 基础的 maven 依赖配置管理。[[English]]
 <dependency>
   <groupId>tech.simter</groupId>
   <artifactId>simter-parent</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
 </dependency>
 ```
 ## 要求
@@ -30,10 +30,16 @@ mvn clean package
 mvn clean deploy -Plan
 ```
 
-### 发布到 Maven 中心仓库
+### 发布到 OSS 仓库
 
 ```bash
 mvn clean deploy -Poss
+```
+
+### 发布到 Bintray 仓库
+
+```bash
+mvn clean deploy -Pbintray
 ```
 
 ## 局域网开发环境配置
@@ -81,6 +87,14 @@ mvn clean deploy -Poss
       <id>oss</id>
       <username>your-oss-account</username>
       <password>your-oss-password</password>
+    </server>
+
+    <!-- 发布到 Bintray (https://simter.bintray.com/maven-repo) 的账号密钥配置 -->
+    <server>
+      <!-- id 必需设为 'bintray'-->
+      <id>bintray</id>
+      <username>your-bintray-account</username>
+      <password>your-bintray-api-key</password>
     </server>
   </servers>
 
