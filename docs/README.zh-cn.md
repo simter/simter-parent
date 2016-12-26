@@ -8,7 +8,7 @@ Simter 基础的 maven 依赖配置管理。[[English]]
 <dependency>
   <groupId>tech.simter</groupId>
   <artifactId>simter-parent</artifactId>
-  <version>0.1.1</version>
+  <version>0.2.0</version>
 </dependency>
 ```
 ## 要求

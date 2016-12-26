@@ -8,7 +8,7 @@ Simter base maven dependencies manage. [[中文]]
 <dependency>
   <groupId>tech.simter</groupId>
   <artifactId>simter-parent</artifactId>
-  <version>0.1.1</version>
+  <version>0.2.0</version>
 </dependency>
 ```
 ## Requirement

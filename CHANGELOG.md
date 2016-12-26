@@ -1,5 +1,8 @@
 # [simter-parent](https://github.com/simter/simter-parent) changelog
 
+## 0.2.0 - 2016-12-26
+- rename oss to sonatype
+
 ## 0.1.1 - 2016-12-25
 - add config for deploy to bintray
 
