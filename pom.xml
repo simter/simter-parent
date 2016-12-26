@@ -127,14 +127,14 @@
   <profiles>
     <!-- Configuration for deploy to Maven Central Repository -->
     <profile>
-      <id>oss</id>
+      <id>sonatype</id>
       <distributionManagement>
         <snapshotRepository>
-          <id>oss</id>
+          <id>sonatype</id>
           <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </snapshotRepository>
         <repository>
-          <id>oss</id>
+          <id>sonatype</id>
           <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
       </distributionManagement>

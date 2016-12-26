@@ -30,17 +30,24 @@ mvn clean package
 mvn clean deploy -Plan
 ```
 
-### 发布到 OSS 仓库
+### 发布到 Sonatype 仓库
 
 ```bash
-mvn clean deploy -Poss
+mvn clean deploy -Psonatype
 ```
+
+发布成功后登陆到 <https://oss.sonatype.org>，在 `Staging Repositories` 找到这个包，然后将其 close 和 release。
+过几个小时后，就会自动同步到 [Maven 中心仓库](http://repo1.maven.org/maven2/tech/simter/simter-parent) 了。
 
 ### 发布到 Bintray 仓库
 
 ```bash
 mvn clean deploy -Pbintray
 ```
+
+发布之前要先在 Bintray 创建 package `https://bintray.com/simter/maven-repo/simter-parent`。
+发布到的地址为 `https://api.bintray.com/maven/simter/maven-repo/simter-parent/;publish=1`。
+发布成功后可以到 <https://simter.bintray.com/maven-repo/tech/simter/simter-parent> 检查一下结果。
 
 ## 局域网开发环境配置
 
@@ -81,12 +88,12 @@ mvn clean deploy -Pbintray
       <password>your-lan-nexus-password</password>
     </server>
 
-    <!-- 发布到 oss (https://oss.sonatype.org) 的账号密码配置 -->
+    <!-- 发布到 sonatype (https://oss.sonatype.org) 的账号密码配置 -->
     <server>
-      <!-- id 必需设为 'oss'-->
-      <id>oss</id>
-      <username>your-oss-account</username>
-      <password>your-oss-password</password>
+      <!-- id 必需设为 'sonatype'-->
+      <id>sonatype</id>
+      <username>your-sonatype-account</username>
+      <password>your-sonatype-password</password>
     </server>
 
     <!-- 发布到 Bintray (https://simter.bintray.com/maven-repo) 的账号密钥配置 -->

@@ -30,17 +30,25 @@ mvn clean package
 mvn clean deploy -Plan
 ```
 
-### Deploy to OSS Repository
+### Deploy to Sonatype Repository
 
 ```bash
-mvn clean deploy -Poss
+mvn clean deploy -Psonatype
 ```
+
+After deployed, login into <https://oss.sonatype.org>. Through `Staging Repositories`, search this package, 
+then close and release it. After couple hours, it will be synced 
+to [Maven Central Repository](http://repo1.maven.org/maven2/tech/simter/simter-parent).
 
 ### Deploy to Bintray Repository
 
 ```bash
 mvn clean deploy -Pbintray
 ```
+
+Will deploy to `https://api.bintray.com/maven/simter/maven-repo/simter-parent/;publish=1`.
+So first create a package `https://bintray.com/simter/maven-repo/simter-parent` on Bintray.
+After deployed, check it from <https://simter.bintray.com/maven-repo/tech/simter/simter-parent>.
 
 ## LAN Development Configuration 
 
@@ -82,12 +90,12 @@ Means you will run `mvn deploy` command.
       <password>your-lan-nexus-password</password>
     </server>
 
-    <!-- The account and password for deploy to oss (https://oss.sonatype.org) -->
+    <!-- The account and password for deploy to sonatype (https://oss.sonatype.org) -->
     <server>
-      <!-- id must be 'oss'-->
-      <id>oss</id>
-      <username>your-oss-account</username>
-      <password>your-oss-password</password>
+      <!-- id must be 'sonatype'-->
+      <id>sonatype</id>
+      <username>your-sonatype-account</username>
+      <password>your-sonatype-password</password>
     </server>
 
     <!-- The account and api-key for deploy to bintray (https://simter.bintray.com/maven-repo) -->
