@@ -58,6 +58,20 @@
         <version>1.0</version>
       </dependency>
 
+      <!-- Java IOC -->
+      <dependency>
+        <groupId>javax.inject</groupId>
+        <artifactId>javax.inject</artifactId>
+        <version>1</version>
+      </dependency>
+
+      <!-- JAX-RS API: 2.0 2013-05-24、1.1 2008-10-10 -->
+      <dependency>
+        <groupId>javax.ws.rs</groupId>
+        <artifactId>javax.ws.rs-api</artifactId>
+        <version>2.0.1</version>
+      </dependency>
+
       <!-- test -->
       <dependency>
         <groupId>junit</groupId>
