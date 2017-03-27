@@ -65,11 +65,92 @@
         <version>1</version>
       </dependency>
 
-      <!-- JAX-RS API: 2.0 2013-05-24、1.1 2008-10-10 -->
+      <dependency>
+        <groupId>javax.annotation</groupId>
+        <artifactId>javax.annotation-api</artifactId>
+        <version>1.3</version>
+      </dependency>
+
+      <!-- JAX-RS/API: 2.0 2013-05-24、1.1 2008-10-10 -->
       <dependency>
         <groupId>javax.ws.rs</groupId>
         <artifactId>javax.ws.rs-api</artifactId>
         <version>2.0.1</version>
+      </dependency>
+
+      <!-- JAX-RS/Jersey Implementation: 2.25.1 2017-01-20 -->
+      <dependency>
+        <groupId>org.glassfish.jersey</groupId>
+        <artifactId>jersey-bom</artifactId>
+        <version>2.25.1</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <!-- JAX-RS/RestEasy Implementation: 3.1.1.Final 2017-02-23 -->
+      <dependency>
+        <groupId>org.jboss.resteasy</groupId>
+        <artifactId>resteasy-bom</artifactId>
+        <version>3.1.1.Final</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <!-- Spring 4.3.7.RELEASE 2017-03-01 -->
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-framework-bom</artifactId>
+        <version>4.3.7.RELEASE</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <exclusions>
+          <!-- Exclude commons-logging in favor of SLF4j -->
+          <exclusion>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <!-- Logger/API -->
+      <dependency>
+        <!-- 1.7.24 2014-02-24 -->
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.7.24</version>
+      </dependency>
+
+      <!-- Logger/Implementation -->
+      <dependency>
+        <!-- Bridge commons-logging to slf4j-->
+        <groupId>org.slf4j</groupId>
+        <artifactId>jcl-over-slf4j</artifactId>
+        <version>1.7.24</version>
+      </dependency>
+      <dependency>
+        <!-- 1.2.1 2017-02-14 -->
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-core</artifactId>
+        <version>1.2.1</version>
+      </dependency>
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.2.1</version>
+      </dependency>
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-access</artifactId>
+        <version>1.2.1</version>
+      </dependency>
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-site</artifactId>
+        <version>1.2.1</version>
       </dependency>
 
       <!-- test -->
@@ -79,14 +160,31 @@
         <version>4.12</version>
       </dependency>
       <dependency>
-        <groupId>org.mockito</groupId>
-        <artifactId>mockito-core</artifactId>
-        <version>2.2.17</version>
+        <groupId>org.hamcrest</groupId>
+        <artifactId>hamcrest-library</artifactId>
+        <version>1.3</version>
       </dependency>
       <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-core</artifactId>
+        <version>2.7.13</version>
+      </dependency>
+
+      <dependency>
+        <!-- 1.4 2016-03-28 -->
         <groupId>com.owlike</groupId>
         <artifactId>genson</artifactId>
-        <version>1.3</version>
+        <version>1.4</version>
+      </dependency>
+      <dependency>
+        <groupId>io.reactivex.rxjava2</groupId>
+        <artifactId>rxjava</artifactId>
+        <version>2.0.7</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp</artifactId>
+        <version>3.6.0</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
