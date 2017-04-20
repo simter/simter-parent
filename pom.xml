@@ -1,15 +1,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-dependencies</artifactId>
+    <version>1.5.2.RELEASE</version>
+    <relativePath></relativePath>
+  </parent>
   <groupId>tech.simter</groupId>
   <artifactId>simter-parent</artifactId>
-  <version>0.2-SNAPSHOT</version>
-  <packaging>pom</packaging>
-
   <name>simter-parent</name>
+  <version>0.3-SNAPSHOT</version>
+  <packaging>pom</packaging>
   <description>Simter base maven dependencies manage</description>
   <url>https://github.com/simter/simter-parent</url>
-
   <licenses>
     <license>
       <name>MIT</name>
@@ -17,11 +21,9 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-
   <scm>
     <url>https://github.com/simter/simter-parent.git</url>
   </scm>
-
   <organization>
     <name>simter</name>
     <url>https://github.com/simter</url>
@@ -36,7 +38,6 @@
     <system>GitHub</system>
     <url>https://github.com/simter/simter-parent/issues</url>
   </issueManagement>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <jdk.version>1.8</jdk.version>
@@ -48,7 +49,6 @@
     <!--<maven.javadoc.skip>true</maven.javadoc.skip>-->
     <!--<source.skip>false</source.skip>-->
   </properties>
-
   <dependencyManagement>
     <dependencies>
       <!-- json: JSR-353 API -->
@@ -95,32 +95,7 @@
         <version>2.0.1</version>
       </dependency>
 
-      <!-- JAX-RS/Jersey Implementation: 2.25.1 2017-01-20 -->
-      <dependency>
-        <groupId>org.glassfish.jersey</groupId>
-        <artifactId>jersey-bom</artifactId>
-        <version>2.25.1</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-
-      <!-- JAX-RS/RestEasy Implementation: 3.1.1.Final 2017-02-23 -->
-      <dependency>
-        <groupId>org.jboss.resteasy</groupId>
-        <artifactId>resteasy-bom</artifactId>
-        <version>3.1.1.Final</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-
       <!-- Spring 4.3.7.RELEASE 2017-03-01 -->
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-framework-bom</artifactId>
-        <version>4.3.7.RELEASE</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-core</artifactId>
@@ -132,59 +107,17 @@
           </exclusion>
         </exclusions>
       </dependency>
-
-      <!-- Logger/API -->
       <dependency>
-        <!-- 1.7.24 2014-02-24 -->
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-api</artifactId>
-        <version>1.7.24</version>
-      </dependency>
-
-      <!-- Logger/Implementation -->
-      <dependency>
-        <!-- Bridge commons-logging to slf4j-->
-        <groupId>org.slf4j</groupId>
-        <artifactId>jcl-over-slf4j</artifactId>
-        <version>1.7.24</version>
-      </dependency>
-      <dependency>
-        <!-- 1.2.1 2017-02-14 -->
-        <groupId>ch.qos.logback</groupId>
-        <artifactId>logback-core</artifactId>
-        <version>1.2.1</version>
-      </dependency>
-      <dependency>
-        <groupId>ch.qos.logback</groupId>
-        <artifactId>logback-classic</artifactId>
-        <version>1.2.1</version>
-      </dependency>
-      <dependency>
-        <groupId>ch.qos.logback</groupId>
-        <artifactId>logback-access</artifactId>
-        <version>1.2.1</version>
-      </dependency>
-      <dependency>
-        <groupId>ch.qos.logback</groupId>
-        <artifactId>logback-site</artifactId>
-        <version>1.2.1</version>
-      </dependency>
-
-      <!-- test -->
-      <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.12</version>
-      </dependency>
-      <dependency>
-        <groupId>org.hamcrest</groupId>
-        <artifactId>hamcrest-library</artifactId>
-        <version>1.3</version>
-      </dependency>
-      <dependency>
-        <groupId>org.mockito</groupId>
-        <artifactId>mockito-core</artifactId>
-        <version>2.7.13</version>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>${spring.version}</version>
+        <scope>test</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
 
       <dependency>
@@ -203,14 +136,8 @@
         <artifactId>okhttp</artifactId>
         <version>3.6.0</version>
       </dependency>
-      <dependency>
-        <groupId>org.apache.httpcomponents</groupId>
-        <artifactId>httpcomponents-client</artifactId>
-        <version>4.5.3</version>
-      </dependency>
     </dependencies>
   </dependencyManagement>
-
   <build>
     <pluginManagement>
       <plugins>
@@ -257,7 +184,6 @@
       </plugins>
     </pluginManagement>
   </build>
-
   <profiles>
     <!-- Configuration for deploy to Maven Central Repository -->
     <profile>
