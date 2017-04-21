@@ -210,7 +210,33 @@
     </plugins>
   </build>
   <profiles>
-    <!-- Configuration for deploy to Maven Central Repository -->
+    <!-- deploy-lan: Configuration for deploy to LAN nexus repository -->
+    <profile>
+      <id>lan</id>
+      <distributionManagement>
+        <repository>
+          <id>lan</id>
+          <url>${lan-release-url}</url>
+        </repository>
+        <snapshotRepository>
+          <id>lan</id>
+          <url>${lan-snapshot-url}</url>
+        </snapshotRepository>
+      </distributionManagement>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <!-- deploy-sonatype: Configuration for deploy to Maven Central Repository -->
     <profile>
       <id>sonatype</id>
       <distributionManagement>
@@ -240,8 +266,7 @@
         </plugins>
       </build>
     </profile>
-
-    <!-- Configuration for deploy to Simter Bintray Maven Repository -->
+    <!-- deploy-bintray: Configuration for deploy to Simter Bintray Maven Repository -->
     <profile>
       <id>bintray</id>
       <distributionManagement>
@@ -272,31 +297,93 @@
       </build>
     </profile>
 
-    <!-- Configuration for deploy to LAN nexus repository -->
+    <!-- database: hsql -->
     <profile>
-      <id>lan</id>
-      <distributionManagement>
-        <repository>
-          <id>lan</id>
-          <url>${lan-release-url}</url>
-        </repository>
-        <snapshotRepository>
-          <id>lan</id>
-          <url>${lan-snapshot-url}</url>
-        </snapshotRepository>
-      </distributionManagement>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-source-plugin</artifactId>
-          </plugin>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-javadoc-plugin</artifactId>
-          </plugin>
-        </plugins>
-      </build>
+      <id>hsql</id>
+      <dependencies>
+        <dependency>
+          <groupId>org.hsqldb</groupId>
+          <artifactId>hsqldb</artifactId>
+          <scope>runtime</scope>
+        </dependency>
+      </dependencies>
+    </profile>
+    <!-- database: postgres -->
+    <profile>
+      <id>postgres</id>
+      <dependencies>
+        <dependency>
+          <groupId>org.postgresql</groupId>
+          <artifactId>postgresql</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+    <!-- database: mysql -->
+    <profile>
+      <id>mysql</id>
+      <dependencies>
+        <dependency>
+          <groupId>mysql</groupId>
+          <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+
+    <!-- rest: jersey -->
+    <profile>
+      <id>jersey</id>
+      <dependencies>
+        <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-jersey</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+    <!-- rest: spring-mvc -->
+    <profile>
+      <id>spring-mvc</id>
+      <dependencies>
+        <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-webmvc</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+
+    <!-- http server: tomcat -->
+    <profile>
+      <id>tomcat</id>
+      <dependencies>
+        <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-tomcat</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+    <!-- http server: jetty -->
+    <profile>
+      <id>jetty</id>
+      <dependencies>
+        <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-jetty</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+    <!-- http server: undertow -->
+    <profile>
+      <id>undertow</id>
+      <dependencies>
+        <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-undertow</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-tomcat</artifactId>
+          <scope>provided</scope>
+        </dependency>
+      </dependencies>
     </profile>
   </profiles>
 </project>
