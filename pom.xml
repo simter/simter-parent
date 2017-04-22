@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.5.2.RELEASE</version>
+    <version>1.5.3.RELEASE</version>
   </parent>
   <!--<parent>
     <groupId>org.springframework.boot</groupId>
@@ -45,15 +45,15 @@
   </issueManagement>
   <properties>
     <!-- maven global setting-->
-    <jdk.version>1.8</jdk.version>
+    <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <maven.compiler.source>${jdk.version}</maven.compiler.source>
-    <maven.compiler.target>${jdk.version}</maven.compiler.target>
-    <maven.compiler.compilerVersion>${jdk.version}</maven.compiler.compilerVersion>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+    <maven.compiler.compilerVersion>${java.version}</maven.compiler.compilerVersion>
 
     <!-- upgrade some spring-boot component version to the latest-->
-    <spring-boot.version>1.5.2.RELEASE</spring-boot.version>
+    <spring-boot.version>1.5.3.RELEASE</spring-boot.version>
     <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
     <mockito.version>2.7.22</mockito.version>
     <hibernate.version>5.2.10.Final</hibernate.version>
@@ -108,7 +108,6 @@
         <artifactId>javax.ws.rs-api</artifactId>
         <version>2.0.1</version>
       </dependency>
-      <!-- Spring 4.3.7.RELEASE 2017-03-01 -->
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-core</artifactId>
