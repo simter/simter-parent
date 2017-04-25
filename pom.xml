@@ -45,6 +45,7 @@
     <url>https://github.com/simter/simter-parent/issues</url>
   </issueManagement>
   <properties>
+    <simter.version>0.3-SNAPSHOT</simter.version>
     <!-- maven global setting-->
     <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -69,6 +70,48 @@
   </properties>
   <dependencyManagement>
     <dependencies>
+      <!-- simter modules -->
+      <dependency>
+        <groupId>tech.simter</groupId>
+        <artifactId>simter-parent</artifactId>
+        <version>${simter.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>tech.simter</groupId>
+        <artifactId>simter-context</artifactId>
+        <version>${simter.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>tech.simter</groupId>
+        <artifactId>simter-genson-ext</artifactId>
+        <version>${simter.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>tech.simter</groupId>
+        <artifactId>simter-json</artifactId>
+        <version>${simter.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>tech.simter</groupId>
+        <artifactId>simter-http</artifactId>
+        <version>${simter.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>tech.simter</groupId>
+        <artifactId>simter-jwt</artifactId>
+        <version>${simter.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>tech.simter</groupId>
+        <artifactId>simter-security</artifactId>
+        <version>${simter.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>tech.simter</groupId>
+        <artifactId>simter-meta</artifactId>
+        <version>${simter.version}</version>
+      </dependency>
+
       <!-- json: JSR-353 API -->
       <dependency>
         <groupId>javax.json</groupId>
