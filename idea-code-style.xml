@@ -11,6 +11,11 @@
       <option name="USE_RELATIVE_INDENTS" value="false" />
     </value>
   </option>
+  <SqlCodeStyleSettings>
+    <option name="INDENT_JOIN" value="false" />
+    <option name="NEW_LINE_AFTER_SELECT_2" value="2" />
+    <option name="KEYWORD_CASE" value="1" />
+  </SqlCodeStyleSettings>
   <codeStyleSettings language="CSS">
     <indentOptions>
       <option name="INDENT_SIZE" value="2" />
