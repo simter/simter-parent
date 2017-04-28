@@ -144,17 +144,20 @@
         <groupId>javax.persistence</groupId>
         <artifactId>persistence-api</artifactId>
         <version>2.0</version>
+        <scope>provided</scope>
       </dependency>
-      <!-- 7.0(2015-03-21 JPA2.1) -->
+      <!-- 7.0(2015-03-21 with JPA2.1) -->
       <dependency>
         <groupId>javax</groupId>
         <artifactId>javaee-api</artifactId>
         <version>7.0</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>javax</groupId>
         <artifactId>javaee-web-api</artifactId>
         <version>7.0</version>
+        <scope>provided</scope>
       </dependency>
       <!-- JAX-RS/API: 2.0 2013-05-24、1.1 2008-10-10 -->
       <dependency>
