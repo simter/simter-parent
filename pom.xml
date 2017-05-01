@@ -126,6 +126,16 @@
         <artifactId>simter-meta-jpa</artifactId>
         <version>${simter.version}</version>
       </dependency>
+      <dependency>
+        <groupId>tech.simter</groupId>
+        <artifactId>simter-rest-jaxrs</artifactId>
+        <version>${simter.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>tech.simter</groupId>
+        <artifactId>simter-rest-jaxrs-jersey</artifactId>
+        <version>${simter.version}</version>
+      </dependency>
 
       <!-- json: JSR-353 API -->
       <dependency>
