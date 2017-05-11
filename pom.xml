@@ -5,7 +5,7 @@
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>1.5.3.RELEASE</version>
-    <relativePath></relativePath>
+    <relativePath/>
   </parent>
   <!--<parent>
     <groupId>org.springframework.boot</groupId>
@@ -181,6 +181,16 @@
         <groupId>javax.persistence</groupId>
         <artifactId>persistence-api</artifactId>
         <version>2.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate.javax.persistence</groupId>
+        <artifactId>hibernate-jpa-2.0-api</artifactId>
+        <version>1.0.1.Final</version>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate.javax.persistence</groupId>
+        <artifactId>hibernate-jpa-2.1-api</artifactId>
+        <version>1.0.0.Final</version>
       </dependency>
       <!-- 7.0(2015-03-21 with JPA2.1) -->
       <dependency>
