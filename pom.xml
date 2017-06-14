@@ -332,6 +332,11 @@
         <artifactId>hamcrest-date</artifactId>
         <version>2.0.4</version>
       </dependency>
+      <dependency>
+        <groupId>org.modelmapper</groupId>
+        <artifactId>modelmapper</artifactId>
+        <version>1.0.0</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <build>
