@@ -191,6 +191,23 @@
         <version>${simter.version}</version>
       </dependency>
 
+      <!-- Simter Id -->
+      <dependency>
+        <groupId>tech.simter</groupId>
+        <artifactId>simter-id-data</artifactId>
+        <version>${simter.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>tech.simter</groupId>
+        <artifactId>simter-id-data-jdbc</artifactId>
+        <version>${simter.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>tech.simter</groupId>
+        <artifactId>simter-id-data-jpa</artifactId>
+        <version>${simter.version}</version>
+      </dependency>
+
       <!-- json: JSR-353 API -->
       <dependency>
         <groupId>javax.json</groupId>
