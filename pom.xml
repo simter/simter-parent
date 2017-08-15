@@ -88,6 +88,11 @@
       </dependency>
       <dependency>
         <groupId>tech.simter</groupId>
+        <artifactId>simter-util</artifactId>
+        <version>${simter.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>tech.simter</groupId>
         <artifactId>simter-context</artifactId>
         <version>${simter.version}</version>
       </dependency>
