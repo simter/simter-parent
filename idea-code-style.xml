@@ -11,6 +11,10 @@
       <option name="USE_RELATIVE_INDENTS" value="false" />
     </value>
   </option>
+  <JSON>
+    <option name="OBJECT_WRAPPING" value="1" />
+    <option name="ARRAY_WRAPPING" value="1" />
+  </JSON>
   <SqlCodeStyleSettings>
     <option name="INDENT_JOIN" value="false" />
     <option name="NEW_LINE_AFTER_SELECT_2" value="2" />
