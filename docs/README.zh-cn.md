@@ -8,7 +8,7 @@ Simter 基础的 maven 依赖配置管理。[[English]]
 <dependency>
   <groupId>tech.simter</groupId>
   <artifactId>simter-parent</artifactId>
-  <version>0.2.0</version>
+  <version>0.3.0</version>
 </dependency>
 ```
 ## 要求
@@ -45,9 +45,9 @@ mvn clean deploy -Psonatype
 mvn clean deploy -Pbintray
 ```
 
-发布之前要先在 Bintray 创建 package `https://bintray.com/simter/maven-repo/simter-parent`。
-发布到的地址为 `https://api.bintray.com/maven/simter/maven-repo/simter-parent/;publish=1`。
-发布成功后可以到 <https://simter.bintray.com/maven-repo/tech/simter/simter-parent> 检查一下结果。
+发布之前要先在 Bintray 创建 package `https://bintray.com/simter/maven/tech.simter:simter-parent`。
+发布到的地址为 `https://api.bintray.com/maven/simter/maven/tech.simter:simter-parent/;publish=1`。
+发布成功后可以到 <https://bintray.com/simter/maven/tech.simter:simter-parent> 检查一下结果。
 
 ## 局域网开发环境配置
 
@@ -96,7 +96,7 @@ mvn clean deploy -Pbintray
       <password>your-sonatype-password</password>
     </server>
 
-    <!-- 发布到 Bintray (https://simter.bintray.com/maven-repo) 的账号密钥配置 -->
+    <!-- 发布到 Bintray (https://bintray.com/simter/maven) 的账号密钥配置 -->
     <server>
       <!-- id 必需设为 'bintray'-->
       <id>bintray</id>

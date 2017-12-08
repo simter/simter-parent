@@ -8,7 +8,7 @@ Simter base maven dependencies manage. [[中文]]
 <dependency>
   <groupId>tech.simter</groupId>
   <artifactId>simter-parent</artifactId>
-  <version>0.2.0</version>
+  <version>0.3.0</version>
 </dependency>
 ```
 ## Requirement
@@ -46,9 +46,9 @@ to [Maven Central Repository](http://repo1.maven.org/maven2/tech/simter/simter-p
 mvn clean deploy -Pbintray
 ```
 
-Will deploy to `https://api.bintray.com/maven/simter/maven-repo/simter-parent/;publish=1`.
-So first create a package `https://bintray.com/simter/maven-repo/simter-parent` on Bintray.
-After deployed, check it from <https://simter.bintray.com/maven-repo/tech/simter/simter-parent>.
+Will deploy to `https://api.bintray.com/maven/simter/maven/tech.simter:simter-parent/;publish=1`.
+So first create a package `https://bintray.com/simter/maven/tech.simter:simter-parent` on Bintray.
+After deployed, check it from <https://bintray.com/simter/maven/tech.simter:simter-parent>.
 
 ## LAN Development Configuration 
 
@@ -98,7 +98,7 @@ Means you will run `mvn deploy` command.
       <password>your-sonatype-password</password>
     </server>
 
-    <!-- The account and api-key for deploy to bintray (https://simter.bintray.com/maven-repo) -->
+    <!-- The account and api-key for deploy to bintray (https://bintray.com/simter/maven) -->
     <server>
       <!-- id must be 'bintray'-->
       <id>bintray</id>
