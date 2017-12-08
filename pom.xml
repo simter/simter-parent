@@ -64,7 +64,7 @@
     <postgresql.version>42.0.0</postgresql.version>
     <poi.version>3.16</poi.version>
 
-    <gpg.executable>gpg2</gpg.executable>
+    <gpg.executable>gpg</gpg.executable>
 
     <!--<maven.javadoc.skip>true</maven.javadoc.skip>-->
     <!--<source.skip>false</source.skip>-->
