@@ -4,15 +4,9 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.5.3.RELEASE</version>
+    <version>1.5.9.RELEASE</version>
     <relativePath/>
   </parent>
-  <!--<parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-dependencies</artifactId>
-    <version>1.5.2.RELEASE</version>
-    <relativePath></relativePath>
-  </parent>-->
   <groupId>tech.simter</groupId>
   <artifactId>simter-parent</artifactId>
   <name>simter-parent</name>
@@ -55,10 +49,10 @@
     <maven.compiler.compilerVersion>${java.version}</maven.compiler.compilerVersion>
 
     <!-- upgrade some spring-boot component version to the latest-->
-    <spring-boot.version>1.5.3.RELEASE</spring-boot.version>
+    <spring-boot.version>1.5.9.RELEASE</spring-boot.version>
     <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
     <mockito.version>2.7.22</mockito.version>
-    <hibernate.version>5.2.10.Final</hibernate.version>
+    <hibernate.version>5.2.12.Final</hibernate.version>
     <hibernate-validator.version>5.4.1.Final</hibernate-validator.version>
     <mysql.version>6.0.6</mysql.version>
     <postgresql.version>42.0.0</postgresql.version>
