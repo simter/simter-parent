@@ -10,7 +10,7 @@
   <groupId>tech.simter</groupId>
   <artifactId>simter-parent</artifactId>
   <name>simter-parent</name>
-  <version>0.3-SNAPSHOT</version>
+  <version>0.3.0</version>
   <packaging>pom</packaging>
   <description>Simter base maven dependencies manage</description>
   <url>https://github.com/simter/simter-parent</url>
@@ -39,7 +39,7 @@
     <url>https://github.com/simter/simter-parent/issues</url>
   </issueManagement>
   <properties>
-    <simter.version>0.3-SNAPSHOT</simter.version>
+    <simter.version>0.3.0</simter.version>
     <!-- maven global setting-->
     <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
