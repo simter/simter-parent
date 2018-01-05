@@ -2,17 +2,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.5.9.RELEASE</version>
-    <relativePath/>
+    <groupId>tech.simter</groupId>
+    <artifactId>simter-dependencies</artifactId>
+    <version>${revision}</version>
+    <relativePath>../simter-dependencies</relativePath>
   </parent>
-  <groupId>tech.simter</groupId>
   <artifactId>simter-parent</artifactId>
-  <name>simter-parent</name>
-  <version>0.3-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <description>Simter base maven dependencies manage</description>
+  <name>simter-parent</name>
+  <description>Simter Parent</description>
   <url>https://github.com/simter/simter-parent</url>
   <licenses>
     <license>
@@ -30,7 +28,7 @@
   </organization>
   <developers>
     <developer>
-      <name>RJ Hwang</name>
+      <name>RJ.Hwang</name>
       <email>rongjihuang@gmail.com</email>
     </developer>
   </developers>
@@ -38,552 +36,41 @@
     <system>GitHub</system>
     <url>https://github.com/simter/simter-parent/issues</url>
   </issueManagement>
-  <properties>
-    <simter.version>0.3-SNAPSHOT</simter.version>
-    <!-- maven global setting-->
-    <java.version>1.8</java.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <maven.compiler.source>${java.version}</maven.compiler.source>
-    <maven.compiler.target>${java.version}</maven.compiler.target>
-    <maven.compiler.compilerVersion>${java.version}</maven.compiler.compilerVersion>
-
-    <!-- upgrade some spring-boot component version to the latest-->
-    <spring-boot.version>1.5.9.RELEASE</spring-boot.version>
-    <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
-    <mockito.version>2.7.22</mockito.version>
-    <hibernate.version>5.2.12.Final</hibernate.version>
-    <hibernate-validator.version>5.4.1.Final</hibernate-validator.version>
-    <mysql.version>6.0.6</mysql.version>
-    <postgresql.version>42.0.0</postgresql.version>
-    <poi.version>3.16</poi.version>
-
-    <gpg.executable>gpg</gpg.executable>
-
-    <!--<maven.javadoc.skip>true</maven.javadoc.skip>-->
-    <!--<source.skip>false</source.skip>-->
-  </properties>
-  <dependencyManagement>
-    <dependencies>
-      <!-- simter modules -->
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-parent</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-test</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-core</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-util</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-template</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-context</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-genson-ext</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-jpa-ext</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-jxls-ext</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-json</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-http</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-jwt</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-security</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-scheduling</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-meta</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-meta-jpa</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-rest-jaxrs</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-rest-jaxrs-jersey</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-
-      <!-- Simter Demo -->
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-demo-parent</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-demo-data</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-demo-data-jpa</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-demo-rest-jaxrs</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-demo-ui-web</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-demo-starter-rest-jaxrs</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-
-      <!-- Simter File -->
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-file-data</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-file-data-jpa</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-file-rest-jaxrs</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-
-      <!-- Simter Id -->
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-id-data</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-id-data-jdbc</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>tech.simter</groupId>
-        <artifactId>simter-id-data-jpa</artifactId>
-        <version>${simter.version}</version>
-      </dependency>
-
-      <!-- json: JSR-353 API -->
-      <dependency>
-        <groupId>javax.json</groupId>
-        <artifactId>javax.json-api</artifactId>
-        <version>1.0</version>
-      </dependency>
-      <!-- Java IOC -->
-      <dependency>
-        <groupId>javax.inject</groupId>
-        <artifactId>javax.inject</artifactId>
-        <version>1</version>
-      </dependency>
-      <dependency>
-        <groupId>javax.annotation</groupId>
-        <artifactId>javax.annotation-api</artifactId>
-        <version>1.3</version>
-      </dependency>
-      <!-- 1.0.2(2007-07-23), 2.0(2009-12-10) -->
-      <dependency>
-        <groupId>javax.persistence</groupId>
-        <artifactId>persistence-api</artifactId>
-        <version>2.0</version>
-      </dependency>
-      <dependency>
-        <groupId>org.hibernate.javax.persistence</groupId>
-        <artifactId>hibernate-jpa-2.0-api</artifactId>
-        <version>1.0.1.Final</version>
-      </dependency>
-      <dependency>
-        <groupId>org.hibernate.javax.persistence</groupId>
-        <artifactId>hibernate-jpa-2.1-api</artifactId>
-        <version>1.0.0.Final</version>
-      </dependency>
-      <!-- 7.0(2015-03-21 with JPA2.1) -->
-      <dependency>
-        <groupId>javax</groupId>
-        <artifactId>javaee-api</artifactId>
-        <version>7.0</version>
-      </dependency>
-      <dependency>
-        <groupId>javax</groupId>
-        <artifactId>javaee-web-api</artifactId>
-        <version>7.0</version>
-      </dependency>
-      <!-- For javax.transaction-api javadoc-->
-      <dependency>
-        <groupId>javax.transaction</groupId>
-        <artifactId>javax.transaction-api</artifactId>
-        <version>1.2</version>
-      </dependency>
-      <dependency>
-        <groupId>javax.interceptor</groupId>
-        <artifactId>javax.interceptor-api</artifactId>
-        <version>1.2</version>
-      </dependency>
-      <dependency>
-        <groupId>javax.enterprise</groupId>
-        <artifactId>cdi-api</artifactId>
-        <version>1.2</version>
-      </dependency>
-      <!-- JAX-RS/API: 2.0 2013-05-24、1.1 2008-10-10 -->
-      <dependency>
-        <groupId>javax.ws.rs</groupId>
-        <artifactId>javax.ws.rs-api</artifactId>
-        <version>2.0.1</version>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-core</artifactId>
-        <exclusions>
-          <!-- Exclude commons-logging in favor of SLF4j -->
-          <exclusion>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-data-jpa</artifactId>
-        <version>${spring-boot.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.hibernate</groupId>
-        <artifactId>hibernate-core</artifactId>
-        <version>${hibernate.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-        <version>${spring-boot.version}</version>
-        <scope>test</scope>
-        <exclusions>
-          <exclusion>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-jersey</artifactId>
-        <version>${spring-boot.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <!-- 1.4 2016-03-28 -->
-        <groupId>com.owlike</groupId>
-        <artifactId>genson</artifactId>
-        <version>1.4</version>
-      </dependency>
-      <dependency>
-        <groupId>io.reactivex.rxjava2</groupId>
-        <artifactId>rxjava</artifactId>
-        <version>2.0.7</version>
-      </dependency>
-      <dependency>
-        <groupId>com.squareup.okhttp3</groupId>
-        <artifactId>okhttp</artifactId>
-        <version>3.6.0</version>
-      </dependency>
-      <dependency>
-        <groupId>org.exparity</groupId>
-        <artifactId>hamcrest-date</artifactId>
-        <version>2.0.4</version>
-      </dependency>
-      <dependency>
-        <groupId>org.modelmapper</groupId>
-        <artifactId>modelmapper</artifactId>
-        <version>1.1.0</version>
-      </dependency>
-      <dependency>
-        <groupId>org.quartz-scheduler</groupId>
-        <artifactId>quartz</artifactId>
-        <version>2.3.0</version>
-      </dependency>
-
-      <!-- jxls 2.x -->
-      <dependency>
-        <groupId>org.jxls</groupId>
-        <artifactId>jxls</artifactId>
-        <version>2.4.2</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jxls</groupId>
-        <artifactId>jxls-poi</artifactId>
-        <version>1.0.13</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jxls</groupId>
-        <artifactId>jxls-jexcel</artifactId>
-        <version>1.0.6</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jxls</groupId>
-        <artifactId>jxls-reader</artifactId>
-        <version>2.0.3</version>
-      </dependency>
-
-      <!-- poi -->
-      <dependency>
-        <groupId>org.apache.poi</groupId>
-        <artifactId>poi</artifactId>
-        <version>${poi.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.poi</groupId>
-        <artifactId>poi-scratchpad</artifactId>
-        <version>${poi.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.poi</groupId>
-        <artifactId>poi-ooxml</artifactId>
-        <version>${poi.version}</version>
-        <!--<exclusions>
-          <exclusion>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml-schemas</artifactId>
-          </exclusion>
-        </exclusions>-->
-      </dependency>
-      <dependency>
-        <groupId>org.apache.poi</groupId>
-        <artifactId>poi-ooxml-schemas</artifactId>
-        <version>${poi.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.poi</groupId>
-        <artifactId>poi-excelant</artifactId>
-        <version>${poi.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.poi</groupId>
-        <artifactId>ooxml-schemas</artifactId>
-        <version>1.3</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.xmlbeans</groupId>
-        <artifactId>xmlbeans</artifactId>
-        <version>2.6.0</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
   <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-source-plugin</artifactId>
-          <executions>
-            <execution>
-              <id>attach-sources</id>
-              <goals>
-                <goal>jar-no-fork</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-javadoc-plugin</artifactId>
-          <configuration>
-            <charset>UTF-8</charset>
-            <encoding>UTF-8</encoding>
-            <docencoding>UTF-8</docencoding>
-          </configuration>
-          <executions>
-            <execution>
-              <phase>package</phase>
-              <goals>
-                <goal>jar</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-gpg-plugin</artifactId>
-          <version>1.6</version>
-          <executions>
-            <execution>
-              <id>sign-artifacts</id>
-              <phase>verify</phase>
-              <goals>
-                <goal>sign</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-      </plugins>
-    </pluginManagement>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
       </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>flatten-maven-plugin</artifactId>
+        <inherited>true</inherited>
+        <executions>
+          <execution>
+            <!-- Tidy up all POMs before they are published -->
+            <id>flatten</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>flatten</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}</outputDirectory>
+              <updatePomFile>true</updatePomFile>
+              <flattenMode>oss</flattenMode>
+              <pomElements>
+                <parent>expand</parent>
+                <profiles>interpolate</profiles>
+                <dependencyManagement>interpolate</dependencyManagement>
+                <dependencies>interpolate</dependencies>
+              </pomElements>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
   <profiles>
-    <!-- deploy-lan: Configuration for deploy to LAN nexus repository -->
-    <profile>
-      <id>lan</id>
-      <distributionManagement>
-        <repository>
-          <id>lan</id>
-          <url>${lan-release-url}</url>
-        </repository>
-        <snapshotRepository>
-          <id>lan</id>
-          <url>${lan-snapshot-url}</url>
-        </snapshotRepository>
-      </distributionManagement>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-source-plugin</artifactId>
-          </plugin>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-javadoc-plugin</artifactId>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-    <!-- deploy-sonatype: Configuration for deploy to Maven Central Repository -->
-    <profile>
-      <id>sonatype</id>
-      <distributionManagement>
-        <snapshotRepository>
-          <id>sonatype</id>
-          <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </snapshotRepository>
-        <repository>
-          <id>sonatype</id>
-          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-      </distributionManagement>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-source-plugin</artifactId>
-          </plugin>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-javadoc-plugin</artifactId>
-          </plugin>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-    <!-- deploy-bintray: Configuration for deploy to Simter Bintray Maven Repository -->
-    <profile>
-      <id>bintray</id>
-      <distributionManagement>
-        <repository>
-          <id>bintray</id>
-          <url>https://api.bintray.com/maven/simter/maven/${project.groupId}:${project.artifactId}/;publish=1</url>
-        </repository>
-        <snapshotRepository>
-          <id>bintray</id>
-          <url>https://api.bintray.com/maven/simter/maven/${project.groupId}:${project.artifactId}/;publish=1</url>
-        </snapshotRepository>
-      </distributionManagement>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-source-plugin</artifactId>
-          </plugin>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-javadoc-plugin</artifactId>
-          </plugin>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-
     <!-- database: hsql -->
     <profile>
       <id>hsql</id>
