@@ -56,10 +56,12 @@
             </goals>
             <configuration>
               <outputDirectory>${project.build.directory}</outputDirectory>
+              <flattenedPomFilename>flattened-pom.xml</flattenedPomFilename>
               <updatePomFile>true</updatePomFile>
               <flattenMode>oss</flattenMode>
               <pomElements>
-                <parent>expand</parent>
+                <parent>resolve</parent>
+                <properties>interpolate</properties>
                 <profiles>interpolate</profiles>
                 <dependencyManagement>interpolate</dependencyManagement>
                 <dependencies>interpolate</dependencies>
