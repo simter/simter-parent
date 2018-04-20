@@ -62,9 +62,9 @@
               <pomElements>
                 <parent>resolve</parent>
                 <properties>interpolate</properties>
-                <profiles>interpolate</profiles>
-                <dependencyManagement>interpolate</dependencyManagement>
-                <dependencies>interpolate</dependencies>
+                <profiles>keep</profiles>
+                <dependencyManagement>keep</dependencyManagement>
+                <dependencies>keep</dependencies>
               </pomElements>
             </configuration>
           </execution>
