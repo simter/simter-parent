@@ -1,6 +1,20 @@
 # [simter-parent](https://github.com/simter/simter-parent) changelog
 
+## 1.0.0 - 2019-01-07
+
+- Delete profiles
+
+## 0.5.0 - 2018-04-21
+
+- Keep parent for flatten
+- Add maven-enforcer-plugin
+
+## 0.4.0 - 2018-01-05
+
+- Centralize version and move dependencyManagement to simter-dependencies
+
 ## 0.3.0 - 2017-12-11
+
 - Upgrade to spring-boot-1.5.9, hibernate-5.2.10, mockito to 2.7.22
 - Set project.reporting.outputEncoding=UTF-8
 - Set javadoc UTF-8
@@ -32,12 +46,15 @@
 - (rest) spring-boot-starter-web exclude spring-webmvc and spring-boot-starter-tomcat, spring-boot-starter-jersey exclude spring-boot-starter-tomcat
 
 ## 0.2.0 - 2016-12-26
+
 - Rename oss to sonatype
 
 ## 0.1.1 - 2016-12-25
+
 - Add config for deploy to bintray
 
 ## 0.1.0 - 2016-12-21
+
 - runtime javax.json:javax.json-api:1.0
 - test junit:junit:4.12
 - test org.mockito:mockito-core:2.2.17
