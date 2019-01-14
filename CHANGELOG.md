@@ -1,5 +1,9 @@
 # [simter-parent](https://github.com/simter/simter-parent) changelog
 
+## 1.1.0 - 2019-01-14
+
+- Upgrade maven parent to simter-dependencies-1.1.0
+
 ## 1.0.0 - 2019-01-07
 
 - Delete profiles
