@@ -9,6 +9,9 @@ mysqld
 embedpostgresql
 postgresql
 flapdoodle
+jdbc
+datasource
+jpql
 ilike
 inno
 createrole
@@ -16,6 +19,7 @@ bintray
 cors
 eclipselink
 datanucleus
+springframework
 Dto
 hwang
 Hwang
