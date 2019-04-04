@@ -12,6 +12,9 @@ flapdoodle
 jdbc
 datasource
 jpql
+mongo
+mongodb
+testdb
 ilike
 inno
 createrole
@@ -20,6 +23,8 @@ cors
 eclipselink
 datanucleus
 springframework
+webflux
+autoconfigure
 Dto
 hwang
 Hwang
