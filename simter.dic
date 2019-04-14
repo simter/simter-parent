@@ -8,6 +8,8 @@ msqld
 mysqld
 embedpostgresql
 postgresql
+postgres
+postgre
 flapdoodle
 jdbc
 datasource
