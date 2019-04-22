@@ -27,7 +27,8 @@ datanucleus
 springframework
 webflux
 autoconfigure
-Dto
+dto
+dtos
 hwang
 Hwang
 microservice
