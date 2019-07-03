@@ -1,4 +1,8 @@
-# [simter-parent](https://github.com/simter/simter-parent) changelog
+# simter-parent changelog
+
+## 1.2.0 - 2019-07-02
+
+- Upgrade to simter-dependencies-1.2.0
 
 ## 1.1.0 - 2019-01-14
 
