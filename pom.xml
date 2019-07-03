@@ -8,6 +8,7 @@
     <relativePath/>
   </parent>
   <artifactId>simter-parent</artifactId>
+  <version>1.2.0</version>
   <packaging>pom</packaging>
   <name>simter-parent</name>
   <description>Simter Parent</description>
