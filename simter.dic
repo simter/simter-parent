@@ -10,6 +10,7 @@ embedpostgresql
 postgresql
 postgres
 postgre
+plpgsql
 flapdoodle
 jdbc
 datasource
