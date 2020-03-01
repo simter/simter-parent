@@ -1,5 +1,9 @@
 # simter-parent changelog
 
+## 1.3.0-M1 - 2020-03-01
+
+- Upgrade to simter-dependencies-1.3.0-M13
+
 ## 1.2.0 - 2019-07-02
 
 - Upgrade to simter-dependencies-1.2.0
