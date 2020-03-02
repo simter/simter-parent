@@ -62,3 +62,6 @@ kotlinx
 arabba
 embeddeddatabase
 hikari
+authorizer
+authorizers
+puid
